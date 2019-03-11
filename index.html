@@ -68,6 +68,27 @@
 .subnav:hover .subnav-content {
   display: block;
 }
+
+.icon-bar {
+  width: 100%;
+  background-color: #555;
+  overflow: visible;
+}
+
+.icon-bar a {
+  float: right;
+  width: 20%;
+  text-align: center;
+  padding: 10px 5px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 25px;
+}
+
+.icon-bar a:hover {
+  background-color:red;
+}
+
   </style>
 </head>
 
@@ -81,8 +102,13 @@
         <div class="subnav-content">
           <a href="#indoor activities">Indoor Activities</a>
           <a href="#outdoor activities">Outdoor Activities</a>
-        </div>
       </div>
+  </div>
+  <div class="icon-bar">
+    <a href="#"><i class="fa fa-envelope"></i></a>
+    <a href="#"><i class="fa fa-globe"></i></a>
+  </div>
+
 </body>
 
 </html>
