@@ -1,14 +1,116 @@
 <!doctype html>
 <html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <head>
-  <title>Stay Paw-Sitive!</title>
+  <title>Stay Paw-sitive</title>
+  <style>
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.icon-bar {
+  width: 100%;
+  background-color: #555;
+  overflow: visible;
+}
+
+.icon-bar a {
+  float: right;
+  width: 5%;
+  text-align: center;
+  padding: 10px 5px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 25px;
+}
+
+.icon-bar a:hover {
+  background-color:red;
+}
+
+  </style>
 </head>
 
-
 <body>
-  <p>Something something website goes here.</p>
-  <img src="cat.jpg" width="400">
+  <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="facts about well-being">Facts About Well-Being</a>
+      <div class="subnav">
+        <button class="subnavbtn">Activities <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="#indoor activities">Indoor Activities</a>
+          <a href="#outdoor activities">Outdoor Activities</a>
+      </div>
+  </div>
+  <div class="icon-bar">
+    <a href="#"><i class="fa fa-envelope"></i></a>
+    <a href="#"><i class="fa fa-google"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+  </div>
+
 </body>
 
 </html>
