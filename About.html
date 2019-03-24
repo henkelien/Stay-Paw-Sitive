@@ -7,7 +7,9 @@
   <title>Stay Paw-sitive</title>
   <style>
   body {
-  font-family: Arial, Helvetica, sans-serif;
+    background-color: skyblue;
+    font-family: Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
 
@@ -89,27 +91,201 @@
   background-color:red;
 }
 
+.heading {
+  text-align:center;
+  color: black;
+  font-size:50px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .timeline::after {
+  left: 31px;
+  }
+
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  .left::after, .right::after {
+  left: 15px;
+  }
+
+  .right {
+  left: 0%;
+  }
+}
+
   </style>
 </head>
 
 <body>
-  <div class="navbar">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="facts about well-being">Facts About Well-Being</a>
-      <div class="subnav">
-        <button class="subnavbtn">Activities <i class="fa fa-caret-down"></i></button>
-        <div class="subnav-content">
-          <a href="#indoor activities">Indoor Activities</a>
-          <a href="#outdoor activities">Outdoor Activities</a>
+  <section id="nav">
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="facts about well-being">Facts About Well-Being</a>
+        <div class="subnav">
+          <button class="subnavbtn">Activities <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="#indoor activities">Indoor Activities</a>
+            <a href="#outdoor activities">Outdoor Activities</a>
+        </div>
+    </div>
+    <div class="icon-bar">
+      <a href="#"><i class="fa fa-envelope"></i></a>
+      <a href="#"><i class="fa fa-google"></i></a>
+      <a href="#"><i class="fa fa-facebook"></i></a>
+      <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+  </section>
+
+  <section id="heading">
+    <div class="heading">
+    <p>About Stay-Paw-Sitive</p>
+  </section>
+
+  <section id="timeline">
+    <div class="timeline">
+    <div class="container left">
+      <div class="content">
+        <h2>1 April 2019</h2>
+        <p>Today is the final presentation of the webpages. Hope everything goes well! And hope you all enjoy!</p>
+        <p>The webpages are specifically related to the well-being of people and cats. It discussed how cats comfomr people with stress and pressure. Additionally, different indoor and outdoor activities are presented to benefit both people and cats.</p>
       </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>25 March 2019</h2>
+        <p>Checked the current progress of the whole webpages and identified functions that did not work. </p>
+        <p>Correct the errors within the codes and run the code to ensure different functions work.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>18 March 2019</h2>
+        <p>Updated the JavaScript function of the homepage and went through the layout of subpages.</p>
+        <p>Finished the flipcards contents and CSS within 'Indoor Activity' and 'Outdoor Activity' subpages.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>11 March 2019</h2>
+        <p>We had some tries on our homepage, such as main- and sub- navigation bar, navigation bar with icons, loop scrolling of pictures etc. </p>
+        <p>We shown our current progresses and set specific deadlines for out individual tasks.</p>
+      </div>
+    </div>
+    <div class="container left">
+      <div class="content">
+        <h2>4 March 2019</h2>
+        <p>We draw a script of our homepage and thought about relevant subpages and contents. The overall framework was done.</p>
+        <p>We divided tasks including webpage content, JavaScript function, CSS design, to ensure effective teamwork.</p>
+      </div>
+    </div>
+    <div class="container right">
+      <div class="content">
+        <h2>25 February 2019</h2>
+        <p>Built up our team. Our team members include Celine Frohn, Xueyan Shao, Yiyi Yan, Zikora Enweani.</p>
+        <p>We had our first team meeting during lecture time and decided 'well-being' and 'cats' as our topics. </p>
+      </div>
+    </div>
   </div>
-  <div class="icon-bar">
-    <a href="#"><i class="fa fa-envelope"></i></a>
-    <a href="#"><i class="fa fa-google"></i></a>
-    <a href="#"><i class="fa fa-facebook"></i></a>
-    <a href="#"><i class="fa fa-instagram"></i></a>
-  </div>
+  </section>
 
 </body>
 
