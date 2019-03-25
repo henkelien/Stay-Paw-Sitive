@@ -1,0 +1,276 @@
+<!doctype html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+  <title>Stay Paw-sitive</title>
+  <style>
+  body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: red;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+.icon-bar {
+  width: 100%;
+  background-color: #555;
+  overflow: visible;
+}
+
+.icon-bar a {
+  float: right;
+  width: 5%;
+  text-align: center;
+  padding: 10px 5px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 25px;
+}
+
+.icon-bar a:hover {
+  background-color:red;
+}
+
+.heading {
+  text-align:center;
+  color: black;
+  font-size:50px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  z-index: 2;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 50px;
+}
+
+.row {margin: 0 -5px;}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.flip-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+  </style>
+</head>
+
+<body>
+
+<section id="nav">
+  <div class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="facts about well-being">Facts About Well-Being</a>
+      <div class="subnav">
+        <button class="subnavbtn">Activities <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="#indoor activities">Indoor Activities</a>
+          <a href="#outdoor activities">Outdoor Activities</a>
+      </div>
+  </div>
+  <div class="icon-bar">
+    <a href="#"><i class="fa fa-envelope"></i></a>
+    <a href="#"><i class="fa fa-google"></i></a>
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+  </div>
+</section>
+
+<section id="heading">
+  <div class="heading">
+  <p>Indoor Activities</p>
+</section>
+
+<section id="flip-card">
+  <div class="row">
+    <div class="column">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+        <img src="https://www.google.com/search?q=cats+outside&source=lnms&tbm=isch&sa=X&ved=0ahUKEwiS6PKy853hAhUdTRUIHVhTDf0Q_AUIDigB&biw=1280&bih=629#imgrc=XPytoGA2x4VX7M:"
+        alt="Avatar" style="width:300px;height:300px;">
+      </div>
+          <div class="flip-card-back">
+            <h1>Cat Tree</h1>
+            <p>Enjoy the DIY time of cat tree.</p>
+            <p>An opportunity for cats to exercise.</p>
+            <p>Good choice for hide-and-seek.</p>
+            <p>Add attachable feather and rope toys.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+      <img src="https://www.telegraph.co.uk/content/dam/pets/2016/07/21/103550109_D7JY92_Fluffy_gray_tabby_cat_receiving_a_treat_trans_NvBQzQNjv4Bqq-cwGEIaCy6pqeGcrp6G7dlxCA43ClNW1LjFLHXjEAM.jpg?imwidth=450"
+      alt="Avatar" style="width:300px;height:300px;">
+    </div>
+        <div class="flip-card-back">
+          <h1>Fetch Game</h1>
+          <p>Most popular and simple game.</p>
+          <p>Build an enjoyable relationship.</p>
+          <p>Available at anytime.</p>
+          <p>Give your kitty to exercise.</p>
+        </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="column">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+      <img src="http://www.cutestpaw.com/wp-content/uploads/2012/09/only-wants-to-play-with-empty-box.jpg"
+      alt="Avatar" style="width:300px;height:300px;">
+    </div>
+        <div class="flip-card-back">
+          <h1>Empty boxes</h1>
+          <p>decorate with imagination.</p>
+          <p>Easy accessible materails.</p>
+          <p>Cats adore cardboard.</p>
+          <p>Area for exploration and fun.</p>
+        </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="column">
+    <div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+      <img src="https://images.ctfassets.net/oartd9t7ehdh/1N2jcK8lasWYMkAykeYmQS/38567a9511722abec6e23d60519a00d1/620x346-Animal-Toys-Are-A-Click-Away.jpg"
+      alt="Avatar" style="width:300px;height:300px;">
+    </div>
+        <div class="flip-card-back">
+          <h1>Cat Game App</h1>
+          <p>Enjoy technology with cats.</p>
+          <p>Detach from work and enjoy mobile device.</p>
+          <p>Satisfy the cutiosity of cats.</p>
+          <p>Diversifed of games online.</p>
+        </div>
+    </div>
+  </div>
+  </div>
+
+</div>
+</section>
+
+</body>
+
+</html>
