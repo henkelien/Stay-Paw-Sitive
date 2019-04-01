@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Stay Paw-sitive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <style>
+    body {
+      font-family: 'Indie Flower', cursive;
+      margin: 0;
+      background-color: #CDA34F
+    }
+
+    .navbar {
+      overflow: hidden;
+      background-color: #373F27;
+    }
+
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    .subnav {
+      float: left;
+      overflow: hidden;
+    }
+
+    .subnav .subnavbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
+
+    .navbar a:hover,
+    .subnav:hover .subnavbtn {
+      background-color: #636B46;
+    }
+
+    .subnav-content {
+      display: none;
+      position: absolute;
+      left: 0;
+      background-color: #636B46;
+      width: 100%;
+      z-index: 1;
+    }
+
+    .subnav-content a {
+      float: left;
+      color: white;
+      text-decoration: none;
+    }
+
+    .subnav-content a:hover {
+      background-color: #eee;
+      color: black;
+    }
+
+    .subnav:hover .subnav-content {
+      display: block;
+    }
+
+    .icon-bar {
+      width: 100%;
+      background-color: #555;
+      overflow: visible;
+    }
+
+    .icon-bar a {
+      float: right;
+      width: 5%;
+      text-align: center;
+      padding: 10px 5px;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 25px;
+    }
+
+    .icon-bar a:hover {
+      background-color: #636B46;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+  </style>
+</head>
+
+<body>
+  <section id="nav">
+    <div class="navbar">
+      <a href="./home.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./facts about well-being.html">Facts About Well-Being</a>
+      <div class="subnav">
+        <button class="subnavbtn">Activities <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="./indoor activities.html">Indoor Activities</a>
+          <a href="./outdoor activities.html">Outdoor Activities</a>
+        </div>
+      </div>
+      <div class="icon-bar">
+        <a href="./about.html"><i class="fa fa-envelope"></i></a>
+        <a href="https://www.google.com/"><i class="fa fa-google"></i></a>
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+      </div>
+  </section>
+  <h1>
+    <center>Stay Paw-sitive<center>
+  </h1>
+  <br><br>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 2</div>
+      <img src="https://i.pinimg.com/564x/f7/2a/7d/f72a7d92fbeec47af0fee8dfbca294e7.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="https://i.pinimg.com/564x/0e/e3/a3/0ee3a34a126618306a5d8e6cca988787.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+  </div>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+
+
+</body>
+
+</html>
