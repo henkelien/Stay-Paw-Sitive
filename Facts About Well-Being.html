@@ -1,212 +1,215 @@
 <!doctype html>
 <html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 
 <head>
   <title>Stay Paw-sitive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Indie Flower', cursive;
+      margin: 0;
+      background-color: #C0B283;
+    }
 
-<style>
-  body {
-  font-family: 'Indie Flower', cursive;
-  margin: 0;
-  background-color: #C0B283;
-}
+    .navbar {
+      overflow: hidden;
+      background-color: #373737;
+    }
 
-.navbar {
-  overflow: hidden;
-  background-color: #373737;
-}
+    .navbar a {
+      float: left;
+      font-size: 16px;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
 
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+    .subnav {
+      float: left;
+      overflow: hidden;
+    }
 
-.subnav {
-  float: left;
-  overflow: hidden;
-}
+    .subnav .subnavbtn {
+      font-size: 16px;
+      border: none;
+      outline: none;
+      color: white;
+      padding: 14px 16px;
+      background-color: inherit;
+      font-family: inherit;
+      margin: 0;
+    }
 
-.subnav .subnavbtn {
-  font-size: 16px;
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
+    .navbar a:hover,
+    .subnav:hover .subnavbtn {
+      background-color: #777;
+    }
 
-.navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: #777;
-}
+    .subnav-content {
+      display: none;
+      position: absolute;
+      left: 0;
+      background-color: #777;
+      width: 100%;
+      z-index: 1;
+    }
 
-.subnav-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  background-color: #777;
-  width: 100%;
-  z-index: 1;
-}
+    .subnav-content a {
+      float: left;
+      color: white;
+      text-decoration: none;
+    }
 
-.subnav-content a {
-  float: left;
-  color: white;
-  text-decoration: none;
-}
+    .subnav-content a:hover {
+      background-color: #eee;
+      color: black;
+    }
 
-.subnav-content a:hover {
-  background-color: #eee;
-  color: black;
-}
+    .subnav:hover .subnav-content {
+      display: block;
+    }
 
-.subnav:hover .subnav-content {
-  display: block;
-}
+    .icon-bar {
+      width: 100%;
+      background-color: #555;
+      overflow: visible;
+    }
 
-.icon-bar {
-  width: 100%;
-  background-color: #555;
-  overflow: visible;
-}
+    .icon-bar a {
+      float: right;
+      width: 5%;
+      text-align: center;
+      padding: 10px 5px;
+      transition: all 0.3s ease;
+      color: white;
+      font-size: 25px;
+    }
 
-.icon-bar a {
-  float: right;
-  width: 5%;
-  text-align: center;
-  padding: 10px 5px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 25px;
-}
+    .icon-bar a:hover {
+      background-color: #777;
+    }
 
-.icon-bar a:hover {
-  background-color:#777;
-}
+    .heading {
+      text-align: center;
+      color: black;
+      font-size: 50px;
+    }
 
-.heading {
-  text-align:center;
-  color: black;
-  font-size:50px;
-}
+    .collapsible {
+      background-color: #777;
+      color: WHITE;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      font-family: 'Indie Flower', cursive;
+    }
 
-.collapsible {
-  background-color: #777;
-  color: WHITE;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  font-family:'Indie Flower', cursive;
-}
+    .active,
+    .collapsible:hover {
+      background-color: #555;
+    }
 
-.active, .collapsible:hover {
-  background-color: #555;
-}
-
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #CDCDCD;
-}
-
+    .content {
+      padding: 0 18px;
+      display: none;
+      overflow: hidden;
+      background-color: #CDCDCD;
+    }
   </style>
 </head>
 
 <body>
   <section id="nav">
     <div class="navbar">
-        <a href="./home.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./facts about well-being.html">Facts About Well-Being</a>
-        <div class="subnav">
-          <button class="subnavbtn">Activities <i class="fa fa-caret-down"></i></button>
-          <div class="subnav-content">
-            <a href="./indoor activities.html">Indoor Activities</a>
-            <a href="./outdoor activities.html">Outdoor Activities</a>
+      <a href="./home.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./facts about well-being.html">Facts About Well-Being</a>
+      <div class="subnav">
+        <button class="subnavbtn">Activities <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+          <a href="./indoor activities.html">Indoor Activities</a>
+          <a href="./outdoor activities.html">Outdoor Activities</a>
         </div>
-    </div>
-    <div class="icon-bar">
-      <a href="#"><i class="fa fa-envelope"></i></a>
-      <a href="https://www.google.com/"><i class="fa fa-google"></i></a>
-      <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-      <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-    </div>
+      </div>
+      <div class="icon-bar">
+        <a href="#"><i class="fa fa-envelope"></i></a>
+        <a href="https://www.google.com/"><i class="fa fa-google"></i></a>
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+      </div>
   </section>
 
   <section id="heading">
     <div class="heading">
-    <p>Facts About Well-Being</p>
+      <p>Facts About Well-Being</p>
   </section>
 
   <section id="introcution">
     <div class="introcution">
-    <img src="https://cdn.quizzclub.com/interesting-fact/2017-06/cats-and-their-influence-on-people-the-bond-with-your-cat-helps-to-normalize-your-blood-pressure.jpg";
-    alt="Avatar" style="width:800px;height:540px;position:relative;left:220px;">
+      <img src="https://cdn.quizzclub.com/interesting-fact/2017-06/cats-and-their-influence-on-people-the-bond-with-your-cat-helps-to-normalize-your-blood-pressure.jpg" ; alt="Avatar" style="width:800px;height:540px;position:relative;left:220px;">
 
-  <section id="collapsible">
-    <button class="collapsible">Importance of Well-Being</button>
-  <div class="content">
-    <p>Wellbeing is important, but can be elusive in modern times. It’s a fine balance of enjoying your occupation, maintaining strong relationships, having a nutritious diet, getting enough exercise, enough sleep and sustaining a positive outlook on life; a list in itself that proves somewhat stressful! With current trends emphasizing healthy lifestyles and work/life balance, it’s no surprise that stock photographs and videos that represent those concepts are steadily gaining popularity.</p>
-  </div>
+      <section id="collapsible">
+        <button class="collapsible">Importance of Well-Being</button>
+        <div class="content">
+          <p>Wellbeing is important, but can be elusive in modern times. It’s a fine balance of enjoying your occupation, maintaining strong relationships, having a nutritious diet, getting enough exercise, enough sleep and sustaining a positive
+            outlook on life; a list in itself that proves somewhat stressful! With current trends emphasizing healthy lifestyles and work/life balance, it’s no surprise that stock photographs and videos that represent those concepts are steadily
+            gaining popularity.</p>
+        </div>
 
-  <button class="collapsible">Cats Can Pick Up How People Feel</button>
-  <div class="content">
-    <p>According to a report of BBC News Earth on 14 October 2015, new research has found the first strong evidence that cats are sensitive to human emotional gestures. Cats can read human facial expressions, and they learn this ability over time.</p>
-    <P>To see more details, please use the following link: http://www.bbc.com/earth/story/20151015-your-cat-can-pick-up-on-how-you-are-feeling.</p>
-  </div>
+        <button class="collapsible">Cats Can Pick Up How People Feel</button>
+        <div class="content">
+          <p>According to a report of BBC News Earth on 14 October 2015, new research has found the first strong evidence that cats are sensitive to human emotional gestures. Cats can read human facial expressions, and they learn this ability over
+            time.</p>
+          <P>To see more details, please use the following link: http://www.bbc.com/earth/story/20151015-your-cat-can-pick-up-on-how-you-are-feeling.</p>
+        </div>
 
-  <button class="collapsible">Mood-Boosting Power of cats</button>
-  <div class="content">
-    <p>FutureMedica pulished an article about '17 Health Benefits of Owning a Cat in 2010. The 17 benefits are shown below.</p>
-    <p>1. Lower risk of cardiovascular disease. </p>
-    <p>2. Reduce risk of heart attack.</p>
-    <p>3. Improve your immune function.</p>
-    <p>4. Decrease chance of developing allergies.</p>
-    <p>5. Help prevent asthma in children.</p>
-    <p>6. Reduce blood pressure.</p>
-    <p>7. Lower triglycerides.</p>
-    <p>8. Lower cholesterol.</p>
-    <p>9. Reduced risk of stroke.</p>
-    <p>10. Reduce stress.</p>
-    <p>11. Reduce anxiety.</p>
-    <p>12. Improve your mood.</p>
-    <p>13. Help with depression.</p>
-    <p>14. Help with autism.</p>
-    <p>15. Reduced Ioneliness.</p>
-    <p>16. Fewer health care visits.</p>
-    <p>17. Longer life.</p>
-  </div>
+        <button class="collapsible">Mood-Boosting Power of cats</button>
+        <div class="content">
+          <p>FutureMedica pulished an article about '17 Health Benefits of Owning a Cat in 2010. The 17 benefits are shown below.</p>
+          <p>1. Lower risk of cardiovascular disease. </p>
+          <p>2. Reduce risk of heart attack.</p>
+          <p>3. Improve your immune function.</p>
+          <p>4. Decrease chance of developing allergies.</p>
+          <p>5. Help prevent asthma in children.</p>
+          <p>6. Reduce blood pressure.</p>
+          <p>7. Lower triglycerides.</p>
+          <p>8. Lower cholesterol.</p>
+          <p>9. Reduced risk of stroke.</p>
+          <p>10. Reduce stress.</p>
+          <p>11. Reduce anxiety.</p>
+          <p>12. Improve your mood.</p>
+          <p>13. Help with depression.</p>
+          <p>14. Help with autism.</p>
+          <p>15. Reduced Ioneliness.</p>
+          <p>16. Fewer health care visits.</p>
+          <p>17. Longer life.</p>
+        </div>
 
-  <script>
-  var coll = document.getElementsByClassName("collapsible");
-  var i;
+        <script>
+          var coll = document.getElementsByClassName("collapsible");
+          var i;
 
-  for (i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
-      }
-    });
-  }
-  </script>
-</section>
+          for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+              this.classList.toggle("active");
+              var content = this.nextElementSibling;
+              if (content.style.display === "block") {
+                content.style.display = "none";
+              } else {
+                content.style.display = "block";
+              }
+            });
+          }
+        </script>
+      </section>
 
-  </body>
+</body>
+
 </html>
